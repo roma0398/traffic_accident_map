@@ -23,7 +23,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_359dd53724fd48e3a9fdfac275024990 {
+                #map_57e113d6488742c6a098194c56be86b2 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -32,16 +32,19 @@
                 }
             </style>
         
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
 </head>
 <body>    
     
-            <div class="folium-map" id="map_359dd53724fd48e3a9fdfac275024990" ></div>
+            <div class="folium-map" id="map_57e113d6488742c6a098194c56be86b2" ></div>
         
 </body>
 <script>    
     
-            var map_359dd53724fd48e3a9fdfac275024990 = L.map(
-                "map_359dd53724fd48e3a9fdfac275024990",
+            var map_57e113d6488742c6a098194c56be86b2 = L.map(
+                "map_57e113d6488742c6a098194c56be86b2",
                 {
                     center: [59.939095, 30.315868],
                     crs: L.CRS.EPSG3857,
@@ -55,207 +58,213 @@
 
         
     
-            var tile_layer_ba2d7f0b9a8a47bfb6a360aeec51938d = L.tileLayer(
+            var tile_layer_b48b18e0a41849969f0c0ea3651bafac = L.tileLayer(
                 "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
-            ).addTo(map_359dd53724fd48e3a9fdfac275024990);
+            ).addTo(map_57e113d6488742c6a098194c56be86b2);
         
     
-            var marker_f00ba6dc4aec4e759d29fb8741542844 = L.marker(
+            var marker_cluster_83b104520c9a4b5195a18b3c455467bd = L.markerClusterGroup(
+                {}
+            );
+            map_57e113d6488742c6a098194c56be86b2.addLayer(marker_cluster_83b104520c9a4b5195a18b3c455467bd);
+        
+    
+            var marker_1ab90ff453ab40d484b9c1a189978aeb = L.marker(
                 [60.0297725, 30.217252],
                 {}
-            ).addTo(map_359dd53724fd48e3a9fdfac275024990);
+            ).addTo(marker_cluster_83b104520c9a4b5195a18b3c455467bd);
         
     
-            var icon_063d81846ba1417fa082d3e246ba4e8d = L.AwesomeMarkers.icon(
+            var icon_bf6cc09d06f040eaa0dedf4994148e51 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
             );
-            marker_f00ba6dc4aec4e759d29fb8741542844.setIcon(icon_063d81846ba1417fa082d3e246ba4e8d);
+            marker_1ab90ff453ab40d484b9c1a189978aeb.setIcon(icon_bf6cc09d06f040eaa0dedf4994148e51);
         
     
-        var popup_2431aab85f4343e58b5f02f0f9161cdb = L.popup({"maxWidth": "100%"});
+        var popup_d65b9982c1c7437ca741b20b3d733396 = L.popup({"maxWidth": "100%"});
 
         
-            var html_f446c28b57cf4d5f9b57b4b9e69d96fb = $(`<div id="html_f446c28b57cf4d5f9b57b4b9e69d96fb" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_12342427"target="_blank">link to news in VK</a></div>`)[0];
-            popup_2431aab85f4343e58b5f02f0f9161cdb.setContent(html_f446c28b57cf4d5f9b57b4b9e69d96fb);
+            var html_d4c7ea11a46347359298963ea89f1cc0 = $(`<div id="html_d4c7ea11a46347359298963ea89f1cc0" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_12342427"target="_blank">"link to news in VK"</a></div>`)[0];
+            popup_d65b9982c1c7437ca741b20b3d733396.setContent(html_d4c7ea11a46347359298963ea89f1cc0);
         
 
-        marker_f00ba6dc4aec4e759d29fb8741542844.bindPopup(popup_2431aab85f4343e58b5f02f0f9161cdb)
+        marker_1ab90ff453ab40d484b9c1a189978aeb.bindPopup(popup_d65b9982c1c7437ca741b20b3d733396)
         ;
 
         
     
     
-            var marker_7dc3949da37149139638ab426f488558 = L.marker(
+            var marker_ecc715a981f144d58300cda66d8e6304 = L.marker(
                 [59.8893694, 30.4411342],
                 {}
-            ).addTo(map_359dd53724fd48e3a9fdfac275024990);
+            ).addTo(marker_cluster_83b104520c9a4b5195a18b3c455467bd);
         
     
-            var icon_c9e7a09249d54d7cbd89cf5392ceba11 = L.AwesomeMarkers.icon(
+            var icon_8f5e4578bb284aee88bb3c3e5df22210 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
             );
-            marker_7dc3949da37149139638ab426f488558.setIcon(icon_c9e7a09249d54d7cbd89cf5392ceba11);
+            marker_ecc715a981f144d58300cda66d8e6304.setIcon(icon_8f5e4578bb284aee88bb3c3e5df22210);
         
     
-        var popup_9fe6dbbc3d1c46168a8890489ff1f55e = L.popup({"maxWidth": "100%"});
+        var popup_30dd9b4bfa9b4642a9364fd538efe7e6 = L.popup({"maxWidth": "100%"});
 
         
-            var html_a3f9cf5d9864402186dacd16e644a858 = $(`<div id="html_a3f9cf5d9864402186dacd16e644a858" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_12342361"target="_blank">link to news in VK</a></div>`)[0];
-            popup_9fe6dbbc3d1c46168a8890489ff1f55e.setContent(html_a3f9cf5d9864402186dacd16e644a858);
+            var html_4b4c8d2b1f3344dba9a49474b9cd8e5a = $(`<div id="html_4b4c8d2b1f3344dba9a49474b9cd8e5a" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_12342361"target="_blank">"link to news in VK"</a></div>`)[0];
+            popup_30dd9b4bfa9b4642a9364fd538efe7e6.setContent(html_4b4c8d2b1f3344dba9a49474b9cd8e5a);
         
 
-        marker_7dc3949da37149139638ab426f488558.bindPopup(popup_9fe6dbbc3d1c46168a8890489ff1f55e)
+        marker_ecc715a981f144d58300cda66d8e6304.bindPopup(popup_30dd9b4bfa9b4642a9364fd538efe7e6)
         ;
 
         
     
     
-            var marker_826fe69c297a4a96a8d99188337a1e74 = L.marker(
+            var marker_bad09f26c2fc48ef8cb9ff741847e05e = L.marker(
                 [59.9429404, 30.4118354],
                 {}
-            ).addTo(map_359dd53724fd48e3a9fdfac275024990);
+            ).addTo(marker_cluster_83b104520c9a4b5195a18b3c455467bd);
         
     
-            var icon_6745ed61013447e694e9a2e4f9ac48ab = L.AwesomeMarkers.icon(
+            var icon_053b47ee5f0d4619ade11c46cb5a27d3 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
             );
-            marker_826fe69c297a4a96a8d99188337a1e74.setIcon(icon_6745ed61013447e694e9a2e4f9ac48ab);
+            marker_bad09f26c2fc48ef8cb9ff741847e05e.setIcon(icon_053b47ee5f0d4619ade11c46cb5a27d3);
         
     
-        var popup_ad609b05ddb64ae59514e16da03d872e = L.popup({"maxWidth": "100%"});
+        var popup_037bb01bf25c4783b33e519c99e090aa = L.popup({"maxWidth": "100%"});
 
         
-            var html_413dccf7edd047a996b8b3b4cbd88b3a = $(`<div id="html_413dccf7edd047a996b8b3b4cbd88b3a" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_12342125"target="_blank">link to news in VK</a></div>`)[0];
-            popup_ad609b05ddb64ae59514e16da03d872e.setContent(html_413dccf7edd047a996b8b3b4cbd88b3a);
+            var html_25f86059fe1649c19f3227880daf0322 = $(`<div id="html_25f86059fe1649c19f3227880daf0322" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_12342125"target="_blank">"link to news in VK"</a></div>`)[0];
+            popup_037bb01bf25c4783b33e519c99e090aa.setContent(html_25f86059fe1649c19f3227880daf0322);
         
 
-        marker_826fe69c297a4a96a8d99188337a1e74.bindPopup(popup_ad609b05ddb64ae59514e16da03d872e)
+        marker_bad09f26c2fc48ef8cb9ff741847e05e.bindPopup(popup_037bb01bf25c4783b33e519c99e090aa)
         ;
 
         
     
     
-            var marker_f5aae3051aa54c3f972259d4f0113815 = L.marker(
+            var marker_525f00cbaa4b4f28a6891e680a275e46 = L.marker(
                 [59.8307875, 30.383486],
                 {}
-            ).addTo(map_359dd53724fd48e3a9fdfac275024990);
+            ).addTo(marker_cluster_83b104520c9a4b5195a18b3c455467bd);
         
     
-            var icon_2e173c2c095348a4bf69350041690739 = L.AwesomeMarkers.icon(
+            var icon_32b8b2218ffc41388c30d9e54d7ec4ea = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
             );
-            marker_f5aae3051aa54c3f972259d4f0113815.setIcon(icon_2e173c2c095348a4bf69350041690739);
+            marker_525f00cbaa4b4f28a6891e680a275e46.setIcon(icon_32b8b2218ffc41388c30d9e54d7ec4ea);
         
     
-        var popup_036c59197da949f1b521e7fffd888a28 = L.popup({"maxWidth": "100%"});
+        var popup_baa1956c935740ab902ff2e6a5816497 = L.popup({"maxWidth": "100%"});
 
         
-            var html_926a6354d09544d7911877e5423717f0 = $(`<div id="html_926a6354d09544d7911877e5423717f0" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_12341152"target="_blank">link to news in VK</a></div>`)[0];
-            popup_036c59197da949f1b521e7fffd888a28.setContent(html_926a6354d09544d7911877e5423717f0);
+            var html_6c46c7a8b8944a06a8246983ced38fe6 = $(`<div id="html_6c46c7a8b8944a06a8246983ced38fe6" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_12341152"target="_blank">"link to news in VK"</a></div>`)[0];
+            popup_baa1956c935740ab902ff2e6a5816497.setContent(html_6c46c7a8b8944a06a8246983ced38fe6);
         
 
-        marker_f5aae3051aa54c3f972259d4f0113815.bindPopup(popup_036c59197da949f1b521e7fffd888a28)
+        marker_525f00cbaa4b4f28a6891e680a275e46.bindPopup(popup_baa1956c935740ab902ff2e6a5816497)
         ;
 
         
     
     
-            var marker_6f664b48483f406fb4f6678603d80cee = L.marker(
-                [59.8903147, 30.308035],
+            var marker_ab91fd137d18468496bf891fa8bc87e5 = L.marker(
+                [48.1651783, 27.2946654],
                 {}
-            ).addTo(map_359dd53724fd48e3a9fdfac275024990);
+            ).addTo(marker_cluster_83b104520c9a4b5195a18b3c455467bd);
         
     
-            var icon_444cb989dc02420aa484b116c661c342 = L.AwesomeMarkers.icon(
+            var icon_15219330d86e48ab89efb0f6993f7df6 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
             );
-            marker_6f664b48483f406fb4f6678603d80cee.setIcon(icon_444cb989dc02420aa484b116c661c342);
+            marker_ab91fd137d18468496bf891fa8bc87e5.setIcon(icon_15219330d86e48ab89efb0f6993f7df6);
         
     
-        var popup_c526355feef546eabb426fd6873bebab = L.popup({"maxWidth": "100%"});
+        var popup_eba95df5c0974e9f9956c4b8e0868939 = L.popup({"maxWidth": "100%"});
 
         
-            var html_2c267c6f35fb48eeb60a8a4867f1c62a = $(`<div id="html_2c267c6f35fb48eeb60a8a4867f1c62a" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_12340978"target="_blank">link to news in VK</a></div>`)[0];
-            popup_c526355feef546eabb426fd6873bebab.setContent(html_2c267c6f35fb48eeb60a8a4867f1c62a);
+            var html_8104c3ccc3cf4bc78d93a09199560dfb = $(`<div id="html_8104c3ccc3cf4bc78d93a09199560dfb" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_12340978"target="_blank">"link to news in VK"</a></div>`)[0];
+            popup_eba95df5c0974e9f9956c4b8e0868939.setContent(html_8104c3ccc3cf4bc78d93a09199560dfb);
         
 
-        marker_6f664b48483f406fb4f6678603d80cee.bindPopup(popup_c526355feef546eabb426fd6873bebab)
+        marker_ab91fd137d18468496bf891fa8bc87e5.bindPopup(popup_eba95df5c0974e9f9956c4b8e0868939)
         ;
 
         
     
     
-            var marker_11e2c1b52a614f26b4900dd99c6d7808 = L.marker(
+            var marker_f31c5b476bbb4ce9bb5f9f12a11ecf0d = L.marker(
                 [59.9451825, 30.4780729],
                 {}
-            ).addTo(map_359dd53724fd48e3a9fdfac275024990);
+            ).addTo(marker_cluster_83b104520c9a4b5195a18b3c455467bd);
         
     
-            var icon_6aa5480b86e04495b17591a020305bd1 = L.AwesomeMarkers.icon(
+            var icon_604840a2abf243438433809844d6b5c5 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
             );
-            marker_11e2c1b52a614f26b4900dd99c6d7808.setIcon(icon_6aa5480b86e04495b17591a020305bd1);
+            marker_f31c5b476bbb4ce9bb5f9f12a11ecf0d.setIcon(icon_604840a2abf243438433809844d6b5c5);
         
     
-        var popup_3b35e34a33904a44b3e43ef6fe61ddfd = L.popup({"maxWidth": "100%"});
+        var popup_65ed51ee3d4f4425abed8431922969dc = L.popup({"maxWidth": "100%"});
 
         
-            var html_612c853e070e47219a8ab3c4bcdcf4a8 = $(`<div id="html_612c853e070e47219a8ab3c4bcdcf4a8" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_12340718"target="_blank">link to news in VK</a></div>`)[0];
-            popup_3b35e34a33904a44b3e43ef6fe61ddfd.setContent(html_612c853e070e47219a8ab3c4bcdcf4a8);
+            var html_894495307464466fac0b987e1326b042 = $(`<div id="html_894495307464466fac0b987e1326b042" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_12340718"target="_blank">"link to news in VK"</a></div>`)[0];
+            popup_65ed51ee3d4f4425abed8431922969dc.setContent(html_894495307464466fac0b987e1326b042);
         
 
-        marker_11e2c1b52a614f26b4900dd99c6d7808.bindPopup(popup_3b35e34a33904a44b3e43ef6fe61ddfd)
+        marker_f31c5b476bbb4ce9bb5f9f12a11ecf0d.bindPopup(popup_65ed51ee3d4f4425abed8431922969dc)
         ;
 
         
     
     
-            var marker_cec7f6d3f0d841f68f418b105fa54331 = L.marker(
-                [59.8995433, 30.2755214],
+            var marker_7cb3b8baa09e4abda4e2c7299836fd52 = L.marker(
+                [56.5187216, 85.0482447],
                 {}
-            ).addTo(map_359dd53724fd48e3a9fdfac275024990);
+            ).addTo(marker_cluster_83b104520c9a4b5195a18b3c455467bd);
         
     
-            var icon_ab2dcb4c87d8472894e3f52b70de41a9 = L.AwesomeMarkers.icon(
+            var icon_143fc98652cb43eb8b90c70f4a96a2f8 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
             );
-            marker_cec7f6d3f0d841f68f418b105fa54331.setIcon(icon_ab2dcb4c87d8472894e3f52b70de41a9);
+            marker_7cb3b8baa09e4abda4e2c7299836fd52.setIcon(icon_143fc98652cb43eb8b90c70f4a96a2f8);
         
     
-        var popup_97d8dd996dd4486780f04f012124e4b9 = L.popup({"maxWidth": "100%"});
+        var popup_ba51d191695c46d68125e25313442607 = L.popup({"maxWidth": "100%"});
 
         
-            var html_ba3ef2cf63e345c7bd4a16ceb99879b0 = $(`<div id="html_ba3ef2cf63e345c7bd4a16ceb99879b0" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_12340711"target="_blank">link to news in VK</a></div>`)[0];
-            popup_97d8dd996dd4486780f04f012124e4b9.setContent(html_ba3ef2cf63e345c7bd4a16ceb99879b0);
+            var html_821a7c82ad7d41a08843e9a7dc8efd59 = $(`<div id="html_821a7c82ad7d41a08843e9a7dc8efd59" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_12340711"target="_blank">"link to news in VK"</a></div>`)[0];
+            popup_ba51d191695c46d68125e25313442607.setContent(html_821a7c82ad7d41a08843e9a7dc8efd59);
         
 
-        marker_cec7f6d3f0d841f68f418b105fa54331.bindPopup(popup_97d8dd996dd4486780f04f012124e4b9)
+        marker_7cb3b8baa09e4abda4e2c7299836fd52.bindPopup(popup_ba51d191695c46d68125e25313442607)
         ;
 
         
     
     
-            var marker_00d28d5902504f7f83c077158bbaadc7 = L.marker(
+            var marker_29ce97fea85c4c60986d35ba768aac00 = L.marker(
                 [59.9121908, 30.4398221],
                 {}
-            ).addTo(map_359dd53724fd48e3a9fdfac275024990);
+            ).addTo(marker_cluster_83b104520c9a4b5195a18b3c455467bd);
         
     
-            var icon_8d3c529c754f469fb21382ab69a2ddf8 = L.AwesomeMarkers.icon(
+            var icon_f70518cd970240e5909153235473a3c0 = L.AwesomeMarkers.icon(
                 {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
             );
-            marker_00d28d5902504f7f83c077158bbaadc7.setIcon(icon_8d3c529c754f469fb21382ab69a2ddf8);
+            marker_29ce97fea85c4c60986d35ba768aac00.setIcon(icon_f70518cd970240e5909153235473a3c0);
         
     
-        var popup_11b4fd2d36214554a4725f3f21cfbbf9 = L.popup({"maxWidth": "100%"});
+        var popup_fa67240bcd25452684acb2debae44772 = L.popup({"maxWidth": "100%"});
 
         
-            var html_aebb5566c090495ca60fab0c0e6d9032 = $(`<div id="html_aebb5566c090495ca60fab0c0e6d9032" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_12340566"target="_blank">link to news in VK</a></div>`)[0];
-            popup_11b4fd2d36214554a4725f3f21cfbbf9.setContent(html_aebb5566c090495ca60fab0c0e6d9032);
+            var html_4632612c68ea4264a1b3a3f211b7f13f = $(`<div id="html_4632612c68ea4264a1b3a3f211b7f13f" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_12340566"target="_blank">"link to news in VK"</a></div>`)[0];
+            popup_fa67240bcd25452684acb2debae44772.setContent(html_4632612c68ea4264a1b3a3f211b7f13f);
         
 
-        marker_00d28d5902504f7f83c077158bbaadc7.bindPopup(popup_11b4fd2d36214554a4725f3f21cfbbf9)
+        marker_29ce97fea85c4c60986d35ba768aac00.bindPopup(popup_fa67240bcd25452684acb2debae44772)
         ;
 
         
