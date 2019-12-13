@@ -2,6 +2,9 @@ version: "3"
 
 services:
   server:
-    build: .
+    build: ./flask
     ports:
     - '5000:5000'
+    volumes:
+    - ./flask:/app
+    working_dir: /app

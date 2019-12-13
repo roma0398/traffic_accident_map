@@ -2,6 +2,4 @@ flask
 Flask-WTF
 WTForms
 folium
-geopy
-wtforms_components
 pandas
