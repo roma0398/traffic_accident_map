@@ -4,25 +4,15 @@ from datetime import datetime
 from flask import Flask, render_template, request
 from flask_wtf import FlaskForm
 from wtforms.fields.html5 import DateField
-from wtforms_components import TimeField
-from sqlalchemy import create_engine, Column, Integer, String, DateTime
-from sqlalchemy.orm import scoped_session, sessionmaker
-from sqlalchemy.ext.declarative import declarative_base
 from folium.plugins import MarkerCluster
 import folium
 from geopy.geocoders import Yandex
 import pandas as pd
+import requests
+import json
 
 app = Flask(__name__)
 app.secret_key = 'SHH!'
-
-
-class ExampleForm(FlaskForm):
-    dt_from = DateField('DatePicker', format='%Y-%m-%d')
-    tm_from = TimeField('TimePicker')
-    dt_to = DateField('DatePicker', format='%Y-%m-%d')
-    tm_to = TimeField('TimePicker')
-
 
 def map_render(start_date, end_date):
     data = pd.read_csv('../data/new_with_street.csv')
@@ -34,7 +24,6 @@ def map_render(start_date, end_date):
     f = open('../api_key.txt', 'r')
     api = f.read()
     f.close()
-    geolocator = Yandex(api)
     spb = [59.939095, 30.315868]
     map = folium.Map(location=spb, zoom_start = 10)
     marker_cluster = MarkerCluster().add_to(map)
@@ -43,13 +32,22 @@ def map_render(start_date, end_date):
         if st != '':
             id = df['id'][i]
             addr = f'Санкт-Петербург, {st}'
-            location = geolocator.geocode(addr)
+            res = requests.get(f'https://geocode-maps.yandex.ru/1.x/?format=json&apikey={api}&geocode={addr}')
+            try:
+                loc = json.loads(res.content.decode('utf8'))['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']['Point']['pos'].split(' ')
+                location = [float(loc[1]), float(loc[0])]
+            except:
+                location = None
             if location is None:
                 continue
-            if round(location.latitude, 6) == spb[0] and round(location.longitude, 6) == spb[1]:
+            if round(location[0], 6) == spb[0] and round(location[1], 6) == spb[1]:
                 continue
-            folium.Marker(location=[location.latitude, location.longitude], popup = folium.Popup(f'<a href="https://vk.com/spb_today?w=wall-68471405_{id}"target="_blank">link to news in VK</a>'), icon=folium.Icon(color = 'red', icon='info-sign')).add_to(marker_cluster)
-    map.save("templates/map.html")
+            folium.Marker(location=[location[0], location[1]], popup = folium.Popup(f'<a href="https://vk.com/spb_today?w=wall-68471405_{id}"target="_blank">link to news in VK</a>'), icon=folium.Icon(color = 'red', icon='info-sign')).add_to(marker_cluster)
+    map.save("map1.html")
+
+class ExampleForm(FlaskForm):
+    dt_from = DateField('DatePicker', format='%Y-%m-%d')
+    dt_to = DateField('DatePicker', format='%Y-%m-%d')
 
 
 @app.route('/', methods=['POST', 'GET'])
@@ -62,8 +60,8 @@ def head():
 def get_date():
     form = ExampleForm()
     if form.validate_on_submit():
-        start = ' '.join([request.form['dt_from'], request.form['tm_from']])
-        end = ' '.join([request.form['dt_to'], request.form['tm_to']])
+        start = request.form['dt_from']
+        end = request.form['dt_to']
         map_render(start, end)
     return render_template('map.html')
 

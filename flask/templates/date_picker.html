@@ -3,6 +3,8 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
 <div class="container">
@@ -10,15 +12,33 @@
 <form action="/date" method="post">
 <label> Date from:
 {{ form.dt_from(class='datepicker') }}
-{{ form.tm_from( ) }}
 </label>
 <label>Date to:
 {{ form.dt_to(class='datepicker') }}
-{{ form.tm_to( ) }}
 </label>
 {{ form.hidden_tag() }}
 <input type="submit"/>
 </form>
+{% if images_list %}
+<h2>Files that were found:</h2>
+<table class="table">
+<thead>
+<tr>
+<th>Date&time</th>
+<th>Name</th>
+</tr>
+</thead>
+<tbody>
+{% for image in images_list %}
+<tr>
+<td>{{ image.date_time }}</td>
+<td>{{ image.name }}</td>
+</tr>
+{% endfor %}
+</tbody>
+
+</table>
+{% endif %}
 </div>
 </body>
-</html> 
+</html>
