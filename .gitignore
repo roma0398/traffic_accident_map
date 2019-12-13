@@ -7,3 +7,5 @@ exp/
 api_key.txt
 vk_api.txt
 api_key_bing.txt
+.idea/
+venv/
