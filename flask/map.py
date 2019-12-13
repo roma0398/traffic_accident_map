@@ -6,7 +6,6 @@ from flask_wtf import FlaskForm
 from wtforms.fields.html5 import DateField
 from folium.plugins import MarkerCluster
 import folium
-from geopy.geocoders import Yandex
 import pandas as pd
 import requests
 import json
