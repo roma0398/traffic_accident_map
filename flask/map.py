@@ -14,13 +14,13 @@ app = Flask(__name__)
 app.secret_key = 'SHH!'
 
 def map_render(start_date, end_date):
-    data = pd.read_csv('../data/new_with_street.csv')
+    data = pd.read_csv('data/new_with_street.csv')
     data = data.dropna()
     data = data.reset_index()
     data.drop(['index'], axis=1, inplace=True)
     mask = (data['date'] >= start_date) & (data['date'] <= end_date)
     df = data.loc[mask]
-    f = open('../api_key.txt', 'r')
+    f = open('api_key.txt', 'r')
     api = f.read()
     f.close()
     spb = [59.939095, 30.315868]
