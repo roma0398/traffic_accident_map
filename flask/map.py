@@ -10,6 +10,7 @@ from geopy.geocoders import Yandex
 import pandas as pd
 import requests
 import json
+from tqdm import tqdm
 
 app = Flask(__name__)
 app.secret_key = 'SHH!'
@@ -27,7 +28,7 @@ def map_render(start_date, end_date):
     spb = [59.939095, 30.315868]
     map = folium.Map(location=spb, zoom_start = 10)
     marker_cluster = MarkerCluster().add_to(map)
-    for i in list(df.index.values):
+    for i in tqdm(list(df.index.values)):
         st = df['pavlov'][i]
         if st != '':
             id = df['id'][i]
@@ -67,4 +68,4 @@ def get_date():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=6971, debug=False)
+    app.run(host='0.0.0.0', port=5000, debug=False)
