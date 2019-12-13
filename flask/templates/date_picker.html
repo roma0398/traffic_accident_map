@@ -1,0 +1,24 @@
+<!doctype html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+</head>
+<body>
+<div class="container">
+<h2 style="text-aligh: center;">Date Selection</h2>
+<form action="/date" method="post">
+<label> Date from:
+{{ form.dt_from(class='datepicker') }}
+{{ form.tm_from( ) }}
+</label>
+<label>Date to:
+{{ form.dt_to(class='datepicker') }}
+{{ form.tm_to( ) }}
+</label>
+{{ form.hidden_tag() }}
+<input type="submit"/>
+</form>
+</div>
+</body>
+</html> 

@@ -1,0 +1,1247 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.5.1/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7aa49f88ffd146cc9787dfad330b16dd {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>    
+    
+            <div class="folium-map" id="map_7aa49f88ffd146cc9787dfad330b16dd" ></div>
+        
+</body>
+<script>    
+    
+            var map_7aa49f88ffd146cc9787dfad330b16dd = L.map(
+                "map_7aa49f88ffd146cc9787dfad330b16dd",
+                {
+                    center: [59.939095, 30.315868],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 10,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_7f52f4171e514d33a097c444ef9161ff = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_7aa49f88ffd146cc9787dfad330b16dd);
+        
+    
+            var marker_cluster_4ed548db0e01436e80a30f433f46a514 = L.markerClusterGroup(
+                {}
+            );
+            map_7aa49f88ffd146cc9787dfad330b16dd.addLayer(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var marker_a94b82e0b73b40799530b773bc4d7efa = L.marker(
+                [59.882717, 30.451298],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_2c048ce5dcac4f1da52fab2b71731b7f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a94b82e0b73b40799530b773bc4d7efa.setIcon(icon_2c048ce5dcac4f1da52fab2b71731b7f);
+        
+    
+        var popup_95b49043c0d04323a0a397533886884e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a98fd86970c74cb4a181d39c78354b21 = $(`<div id="html_a98fd86970c74cb4a181d39c78354b21" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6582003"target="_blank">link to news in VK</a></div>`)[0];
+            popup_95b49043c0d04323a0a397533886884e.setContent(html_a98fd86970c74cb4a181d39c78354b21);
+        
+
+        marker_a94b82e0b73b40799530b773bc4d7efa.bindPopup(popup_95b49043c0d04323a0a397533886884e)
+        ;
+
+        
+    
+    
+            var marker_ed3bddcb178b4da888fbb7fb5d71a721 = L.marker(
+                [59.925655, 30.384086],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_0086477723a5437b8ba88632bf9698d3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_ed3bddcb178b4da888fbb7fb5d71a721.setIcon(icon_0086477723a5437b8ba88632bf9698d3);
+        
+    
+        var popup_f833867eaea44af7855e38459588439d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_2049b7a358174c4e8d61a33e6d769b22 = $(`<div id="html_2049b7a358174c4e8d61a33e6d769b22" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6581860"target="_blank">link to news in VK</a></div>`)[0];
+            popup_f833867eaea44af7855e38459588439d.setContent(html_2049b7a358174c4e8d61a33e6d769b22);
+        
+
+        marker_ed3bddcb178b4da888fbb7fb5d71a721.bindPopup(popup_f833867eaea44af7855e38459588439d)
+        ;
+
+        
+    
+    
+            var marker_92aa52304e7346989f76834e239fcfd6 = L.marker(
+                [59.834605, 30.156498],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_442efea5f36345409f525846898e83b3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_92aa52304e7346989f76834e239fcfd6.setIcon(icon_442efea5f36345409f525846898e83b3);
+        
+    
+        var popup_f2aa5a89ff8a48baacecd33b8f79c581 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4703e03ca7684935b93279c66247d647 = $(`<div id="html_4703e03ca7684935b93279c66247d647" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6581857"target="_blank">link to news in VK</a></div>`)[0];
+            popup_f2aa5a89ff8a48baacecd33b8f79c581.setContent(html_4703e03ca7684935b93279c66247d647);
+        
+
+        marker_92aa52304e7346989f76834e239fcfd6.bindPopup(popup_f2aa5a89ff8a48baacecd33b8f79c581)
+        ;
+
+        
+    
+    
+            var marker_f0267307f44e49758d10ed1ba0cbe864 = L.marker(
+                [59.738956, 30.610533],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_e7f0b7cb560d4eed9008c17b8d098297 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f0267307f44e49758d10ed1ba0cbe864.setIcon(icon_e7f0b7cb560d4eed9008c17b8d098297);
+        
+    
+        var popup_20a6514b9f9a45c5bf4809177f645df7 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_06d29de279a64f1899b8f0284e4444b3 = $(`<div id="html_06d29de279a64f1899b8f0284e4444b3" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6581188"target="_blank">link to news in VK</a></div>`)[0];
+            popup_20a6514b9f9a45c5bf4809177f645df7.setContent(html_06d29de279a64f1899b8f0284e4444b3);
+        
+
+        marker_f0267307f44e49758d10ed1ba0cbe864.bindPopup(popup_20a6514b9f9a45c5bf4809177f645df7)
+        ;
+
+        
+    
+    
+            var marker_d31a0ecb5c4141a58a951469632d8ab4 = L.marker(
+                [59.932473, 30.349142],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_e3260578408f435c8a165121e5214b89 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_d31a0ecb5c4141a58a951469632d8ab4.setIcon(icon_e3260578408f435c8a165121e5214b89);
+        
+    
+        var popup_452a30309edd496ab3213d3f35b48740 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_93bf3518aa394b76a41a1921fb95301b = $(`<div id="html_93bf3518aa394b76a41a1921fb95301b" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6581146"target="_blank">link to news in VK</a></div>`)[0];
+            popup_452a30309edd496ab3213d3f35b48740.setContent(html_93bf3518aa394b76a41a1921fb95301b);
+        
+
+        marker_d31a0ecb5c4141a58a951469632d8ab4.bindPopup(popup_452a30309edd496ab3213d3f35b48740)
+        ;
+
+        
+    
+    
+            var marker_4051ce53fd554ac48db565ef14c304d4 = L.marker(
+                [60.001478, 30.253579],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_992cd030bb7c4300b2b65c2b59b1848f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4051ce53fd554ac48db565ef14c304d4.setIcon(icon_992cd030bb7c4300b2b65c2b59b1848f);
+        
+    
+        var popup_9904cb408ba24482b52c08847271f55b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fcb3a8a11060495f9cb7e22e8a5c2669 = $(`<div id="html_fcb3a8a11060495f9cb7e22e8a5c2669" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6580926"target="_blank">link to news in VK</a></div>`)[0];
+            popup_9904cb408ba24482b52c08847271f55b.setContent(html_fcb3a8a11060495f9cb7e22e8a5c2669);
+        
+
+        marker_4051ce53fd554ac48db565ef14c304d4.bindPopup(popup_9904cb408ba24482b52c08847271f55b)
+        ;
+
+        
+    
+    
+            var marker_3b5cccb71f674fbbbd9af4e2f953dd17 = L.marker(
+                [60.002112, 30.201548],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_fff6518c88f2468d93dbfb9decf069fe = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3b5cccb71f674fbbbd9af4e2f953dd17.setIcon(icon_fff6518c88f2468d93dbfb9decf069fe);
+        
+    
+        var popup_867f07a153f44d61a54271598dffbb2e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_1982265dd9f046b085a9e04be22bc271 = $(`<div id="html_1982265dd9f046b085a9e04be22bc271" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6580756"target="_blank">link to news in VK</a></div>`)[0];
+            popup_867f07a153f44d61a54271598dffbb2e.setContent(html_1982265dd9f046b085a9e04be22bc271);
+        
+
+        marker_3b5cccb71f674fbbbd9af4e2f953dd17.bindPopup(popup_867f07a153f44d61a54271598dffbb2e)
+        ;
+
+        
+    
+    
+            var marker_052c47fb9ab745dfa9a4192541a44c56 = L.marker(
+                [59.944562, 30.359939],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_781f9fbeedec49868dcd80ad2c60ab36 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_052c47fb9ab745dfa9a4192541a44c56.setIcon(icon_781f9fbeedec49868dcd80ad2c60ab36);
+        
+    
+        var popup_00fd08f3c1f9441fbf2af8ab6cd80f15 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3c8b0654cbcd4833bf7fac4c10aae95f = $(`<div id="html_3c8b0654cbcd4833bf7fac4c10aae95f" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6580720"target="_blank">link to news in VK</a></div>`)[0];
+            popup_00fd08f3c1f9441fbf2af8ab6cd80f15.setContent(html_3c8b0654cbcd4833bf7fac4c10aae95f);
+        
+
+        marker_052c47fb9ab745dfa9a4192541a44c56.bindPopup(popup_00fd08f3c1f9441fbf2af8ab6cd80f15)
+        ;
+
+        
+    
+    
+            var marker_153da286d12145cca67311baaae31253 = L.marker(
+                [59.932473, 30.349142],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_201b507ca6904c55bc3a5189d5498168 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_153da286d12145cca67311baaae31253.setIcon(icon_201b507ca6904c55bc3a5189d5498168);
+        
+    
+        var popup_6b4ed8f46e7d475bbf5e44f04c41ff89 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_72b4f25c25f946beb123f936ef7dfc39 = $(`<div id="html_72b4f25c25f946beb123f936ef7dfc39" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6580475"target="_blank">link to news in VK</a></div>`)[0];
+            popup_6b4ed8f46e7d475bbf5e44f04c41ff89.setContent(html_72b4f25c25f946beb123f936ef7dfc39);
+        
+
+        marker_153da286d12145cca67311baaae31253.bindPopup(popup_6b4ed8f46e7d475bbf5e44f04c41ff89)
+        ;
+
+        
+    
+    
+            var marker_09145c79c9444ebb9f1ad18fb7d18370 = L.marker(
+                [59.934123, 30.430197],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_0f2f9c9691d248dfb87567585515f4d2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_09145c79c9444ebb9f1ad18fb7d18370.setIcon(icon_0f2f9c9691d248dfb87567585515f4d2);
+        
+    
+        var popup_783e09ea6b6b4212b904724d878451d6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4c5705817a9648629d147665b32fffb3 = $(`<div id="html_4c5705817a9648629d147665b32fffb3" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6580218"target="_blank">link to news in VK</a></div>`)[0];
+            popup_783e09ea6b6b4212b904724d878451d6.setContent(html_4c5705817a9648629d147665b32fffb3);
+        
+
+        marker_09145c79c9444ebb9f1ad18fb7d18370.bindPopup(popup_783e09ea6b6b4212b904724d878451d6)
+        ;
+
+        
+    
+    
+            var marker_e650aab59ccb4927a8297c1cef1e5928 = L.marker(
+                [59.95384, 30.324815],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_88a09ea53f4047d5b0ac5dd7f78f289a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e650aab59ccb4927a8297c1cef1e5928.setIcon(icon_88a09ea53f4047d5b0ac5dd7f78f289a);
+        
+    
+        var popup_31a8e7f9ddc348c4b8ac9f5c0d91c2c9 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_f660e6b7cbf54c549cb68065879a7fbd = $(`<div id="html_f660e6b7cbf54c549cb68065879a7fbd" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6580076"target="_blank">link to news in VK</a></div>`)[0];
+            popup_31a8e7f9ddc348c4b8ac9f5c0d91c2c9.setContent(html_f660e6b7cbf54c549cb68065879a7fbd);
+        
+
+        marker_e650aab59ccb4927a8297c1cef1e5928.bindPopup(popup_31a8e7f9ddc348c4b8ac9f5c0d91c2c9)
+        ;
+
+        
+    
+    
+            var marker_2e7039f1243f4bb7b1ff158cbfa787ff = L.marker(
+                [59.994828, 30.399088],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_b33d4af19f134bd9af46a65b18d49700 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2e7039f1243f4bb7b1ff158cbfa787ff.setIcon(icon_b33d4af19f134bd9af46a65b18d49700);
+        
+    
+        var popup_fbe966b75f4143a287160a15af30be41 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5f75ede6bf57479590bcd3c2264943dd = $(`<div id="html_5f75ede6bf57479590bcd3c2264943dd" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6579949"target="_blank">link to news in VK</a></div>`)[0];
+            popup_fbe966b75f4143a287160a15af30be41.setContent(html_5f75ede6bf57479590bcd3c2264943dd);
+        
+
+        marker_2e7039f1243f4bb7b1ff158cbfa787ff.bindPopup(popup_fbe966b75f4143a287160a15af30be41)
+        ;
+
+        
+    
+    
+            var marker_e38f68fb1205437da7f7b56615d6d011 = L.marker(
+                [59.844488, 30.250453],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_300475f0a94048a09a5de723123b4b99 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e38f68fb1205437da7f7b56615d6d011.setIcon(icon_300475f0a94048a09a5de723123b4b99);
+        
+    
+        var popup_e418996a65fb4385a7db1ade59166f9d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_603ebebee4744a7b9875f8b0fcdb5201 = $(`<div id="html_603ebebee4744a7b9875f8b0fcdb5201" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6579735"target="_blank">link to news in VK</a></div>`)[0];
+            popup_e418996a65fb4385a7db1ade59166f9d.setContent(html_603ebebee4744a7b9875f8b0fcdb5201);
+        
+
+        marker_e38f68fb1205437da7f7b56615d6d011.bindPopup(popup_e418996a65fb4385a7db1ade59166f9d)
+        ;
+
+        
+    
+    
+            var marker_46ad47000c694eb59eb900530eadf605 = L.marker(
+                [59.928257, 30.34748],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_21009f62eb7d4c849f0fc9c0ae02d449 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_46ad47000c694eb59eb900530eadf605.setIcon(icon_21009f62eb7d4c849f0fc9c0ae02d449);
+        
+    
+        var popup_66034c9249ec4cb3bde082ba5e21159b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9f9ef34813e14c6292438ffb85af58ea = $(`<div id="html_9f9ef34813e14c6292438ffb85af58ea" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6579343"target="_blank">link to news in VK</a></div>`)[0];
+            popup_66034c9249ec4cb3bde082ba5e21159b.setContent(html_9f9ef34813e14c6292438ffb85af58ea);
+        
+
+        marker_46ad47000c694eb59eb900530eadf605.bindPopup(popup_66034c9249ec4cb3bde082ba5e21159b)
+        ;
+
+        
+    
+    
+            var marker_c93b590344f24d2b893168744f179612 = L.marker(
+                [59.945562, 30.274635],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_a02b1134cb174cbaaba7bd1060de037f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c93b590344f24d2b893168744f179612.setIcon(icon_a02b1134cb174cbaaba7bd1060de037f);
+        
+    
+        var popup_884e1b7ae72d4e36bb570ef9d36a9c79 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0dd202cd85d74ab9b82eb84dd0aa99f5 = $(`<div id="html_0dd202cd85d74ab9b82eb84dd0aa99f5" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6579113"target="_blank">link to news in VK</a></div>`)[0];
+            popup_884e1b7ae72d4e36bb570ef9d36a9c79.setContent(html_0dd202cd85d74ab9b82eb84dd0aa99f5);
+        
+
+        marker_c93b590344f24d2b893168744f179612.bindPopup(popup_884e1b7ae72d4e36bb570ef9d36a9c79)
+        ;
+
+        
+    
+    
+            var marker_0e4baed3a5cd4e53bbbd8a6949442097 = L.marker(
+                [59.994148, 30.255573],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_ad85322a5b004b899bcdc128457f56f4 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0e4baed3a5cd4e53bbbd8a6949442097.setIcon(icon_ad85322a5b004b899bcdc128457f56f4);
+        
+    
+        var popup_716fb40c795e44159eac75adfff4ae4d = L.popup({"maxWidth": "100%"});
+
+        
+            var html_257d9d6f2e8241758a8ec864c645a308 = $(`<div id="html_257d9d6f2e8241758a8ec864c645a308" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6578579"target="_blank">link to news in VK</a></div>`)[0];
+            popup_716fb40c795e44159eac75adfff4ae4d.setContent(html_257d9d6f2e8241758a8ec864c645a308);
+        
+
+        marker_0e4baed3a5cd4e53bbbd8a6949442097.bindPopup(popup_716fb40c795e44159eac75adfff4ae4d)
+        ;
+
+        
+    
+    
+            var marker_289a139b479d4997acdcebada5e6be42 = L.marker(
+                [59.829898, 30.346303],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_a548e8e8fa97416f9ceaa555e315b632 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_289a139b479d4997acdcebada5e6be42.setIcon(icon_a548e8e8fa97416f9ceaa555e315b632);
+        
+    
+        var popup_daef4a1932654de5944ae3d92989f686 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_e7c04df40cda4a0d9b875fc6808071af = $(`<div id="html_e7c04df40cda4a0d9b875fc6808071af" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6578533"target="_blank">link to news in VK</a></div>`)[0];
+            popup_daef4a1932654de5944ae3d92989f686.setContent(html_e7c04df40cda4a0d9b875fc6808071af);
+        
+
+        marker_289a139b479d4997acdcebada5e6be42.bindPopup(popup_daef4a1932654de5944ae3d92989f686)
+        ;
+
+        
+    
+    
+            var marker_c76ae7e220c643dfb99bf09200bb4bef = L.marker(
+                [59.950911, 30.394749],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_32f1749cc59d4d8e9957a4bddd021975 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c76ae7e220c643dfb99bf09200bb4bef.setIcon(icon_32f1749cc59d4d8e9957a4bddd021975);
+        
+    
+        var popup_fbcce431b45140a391f6e179c211711f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_69a2afab15b647fdbc748c952da54fee = $(`<div id="html_69a2afab15b647fdbc748c952da54fee" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6578473"target="_blank">link to news in VK</a></div>`)[0];
+            popup_fbcce431b45140a391f6e179c211711f.setContent(html_69a2afab15b647fdbc748c952da54fee);
+        
+
+        marker_c76ae7e220c643dfb99bf09200bb4bef.bindPopup(popup_fbcce431b45140a391f6e179c211711f)
+        ;
+
+        
+    
+    
+            var marker_e82531b926894124bd23c2183c181c9c = L.marker(
+                [59.969826, 30.386089],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_0a548c8cf43b489390ddf08831f1e8b1 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e82531b926894124bd23c2183c181c9c.setIcon(icon_0a548c8cf43b489390ddf08831f1e8b1);
+        
+    
+        var popup_9cf72f2e5a1b41b79d18fe3c2a39e2f6 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_11f50f080d7947c6a6734548209cc2f4 = $(`<div id="html_11f50f080d7947c6a6734548209cc2f4" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6578330"target="_blank">link to news in VK</a></div>`)[0];
+            popup_9cf72f2e5a1b41b79d18fe3c2a39e2f6.setContent(html_11f50f080d7947c6a6734548209cc2f4);
+        
+
+        marker_e82531b926894124bd23c2183c181c9c.bindPopup(popup_9cf72f2e5a1b41b79d18fe3c2a39e2f6)
+        ;
+
+        
+    
+    
+            var marker_a5594269a5d84ea5a5e0af5f950e78ec = L.marker(
+                [59.932473, 30.349142],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_81568076ddf04a18ae4132b70c99b89a = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_a5594269a5d84ea5a5e0af5f950e78ec.setIcon(icon_81568076ddf04a18ae4132b70c99b89a);
+        
+    
+        var popup_2d4d0d5134b44dfeb953bbbbffe561ca = L.popup({"maxWidth": "100%"});
+
+        
+            var html_5484382d75294a52b65c6fa3494267f2 = $(`<div id="html_5484382d75294a52b65c6fa3494267f2" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6578326"target="_blank">link to news in VK</a></div>`)[0];
+            popup_2d4d0d5134b44dfeb953bbbbffe561ca.setContent(html_5484382d75294a52b65c6fa3494267f2);
+        
+
+        marker_a5594269a5d84ea5a5e0af5f950e78ec.bindPopup(popup_2d4d0d5134b44dfeb953bbbbffe561ca)
+        ;
+
+        
+    
+    
+            var marker_2b9349a8cb0548068ef4a89a87dee777 = L.marker(
+                [59.874277, 30.387967],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_8f61bbc866774fc4a1f2ba54c06c5caa = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_2b9349a8cb0548068ef4a89a87dee777.setIcon(icon_8f61bbc866774fc4a1f2ba54c06c5caa);
+        
+    
+        var popup_b77e5aa6644a4f4b8dd72f75a65edc87 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_10535888d02a44c0a6a1975b1c04d7d1 = $(`<div id="html_10535888d02a44c0a6a1975b1c04d7d1" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6578251"target="_blank">link to news in VK</a></div>`)[0];
+            popup_b77e5aa6644a4f4b8dd72f75a65edc87.setContent(html_10535888d02a44c0a6a1975b1c04d7d1);
+        
+
+        marker_2b9349a8cb0548068ef4a89a87dee777.bindPopup(popup_b77e5aa6644a4f4b8dd72f75a65edc87)
+        ;
+
+        
+    
+    
+            var marker_e07e5335f8644f03adb895b2037fee36 = L.marker(
+                [60.010407, 30.203219],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_5028e9f064c0462984d86ee11a3d7f4c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e07e5335f8644f03adb895b2037fee36.setIcon(icon_5028e9f064c0462984d86ee11a3d7f4c);
+        
+    
+        var popup_6b5de02f331041f99111b5d7ee3b1021 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9af65b57a29a42fa9eb98d7f235eadea = $(`<div id="html_9af65b57a29a42fa9eb98d7f235eadea" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6578200"target="_blank">link to news in VK</a></div>`)[0];
+            popup_6b5de02f331041f99111b5d7ee3b1021.setContent(html_9af65b57a29a42fa9eb98d7f235eadea);
+        
+
+        marker_e07e5335f8644f03adb895b2037fee36.bindPopup(popup_6b5de02f331041f99111b5d7ee3b1021)
+        ;
+
+        
+    
+    
+            var marker_cd6dbf4944534286958c2186044d6e9c = L.marker(
+                [59.852081, 30.238487],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_d64f54872c6d40e686289fd3e42922d6 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_cd6dbf4944534286958c2186044d6e9c.setIcon(icon_d64f54872c6d40e686289fd3e42922d6);
+        
+    
+        var popup_cd988bc196e44416bfe355c1d791f5ad = L.popup({"maxWidth": "100%"});
+
+        
+            var html_0677bbc3b17f4aa8aec256516b64d6b8 = $(`<div id="html_0677bbc3b17f4aa8aec256516b64d6b8" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6577716"target="_blank">link to news in VK</a></div>`)[0];
+            popup_cd988bc196e44416bfe355c1d791f5ad.setContent(html_0677bbc3b17f4aa8aec256516b64d6b8);
+        
+
+        marker_cd6dbf4944534286958c2186044d6e9c.bindPopup(popup_cd988bc196e44416bfe355c1d791f5ad)
+        ;
+
+        
+    
+    
+            var marker_88fbb82d660444669c5480252e8ff6cb = L.marker(
+                [59.962994, 30.408655],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_224efd4c3ce84e4fbf7cd25eae8b17a2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_88fbb82d660444669c5480252e8ff6cb.setIcon(icon_224efd4c3ce84e4fbf7cd25eae8b17a2);
+        
+    
+        var popup_cb19c0230543440ba5f55e095031b644 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fe37d8de284a4884a95aad5e1f65bfa2 = $(`<div id="html_fe37d8de284a4884a95aad5e1f65bfa2" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6577698"target="_blank">link to news in VK</a></div>`)[0];
+            popup_cb19c0230543440ba5f55e095031b644.setContent(html_fe37d8de284a4884a95aad5e1f65bfa2);
+        
+
+        marker_88fbb82d660444669c5480252e8ff6cb.bindPopup(popup_cb19c0230543440ba5f55e095031b644)
+        ;
+
+        
+    
+    
+            var marker_eba862711c9e4a2ab5df973ced6da374 = L.marker(
+                [59.909314, 30.275354],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_4a96dde809c84336b2c815574659c87e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_eba862711c9e4a2ab5df973ced6da374.setIcon(icon_4a96dde809c84336b2c815574659c87e);
+        
+    
+        var popup_b78bb2454f084cf1bb3c78bbdf49589b = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c08697577df14a7ba888b7fa81bb0eb4 = $(`<div id="html_c08697577df14a7ba888b7fa81bb0eb4" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6577693"target="_blank">link to news in VK</a></div>`)[0];
+            popup_b78bb2454f084cf1bb3c78bbdf49589b.setContent(html_c08697577df14a7ba888b7fa81bb0eb4);
+        
+
+        marker_eba862711c9e4a2ab5df973ced6da374.bindPopup(popup_b78bb2454f084cf1bb3c78bbdf49589b)
+        ;
+
+        
+    
+    
+            var marker_cfcd2d06c0ff4b0a8cf4840d47daee9a = L.marker(
+                [59.999746, 30.234355],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_484bc274aaff43a2b0b19da2cdbd754c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_cfcd2d06c0ff4b0a8cf4840d47daee9a.setIcon(icon_484bc274aaff43a2b0b19da2cdbd754c);
+        
+    
+        var popup_e75719be4cf944438b19d041d4f1ceb0 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4eb697f152de4654a7e141f0248e1e6c = $(`<div id="html_4eb697f152de4654a7e141f0248e1e6c" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6577690"target="_blank">link to news in VK</a></div>`)[0];
+            popup_e75719be4cf944438b19d041d4f1ceb0.setContent(html_4eb697f152de4654a7e141f0248e1e6c);
+        
+
+        marker_cfcd2d06c0ff4b0a8cf4840d47daee9a.bindPopup(popup_e75719be4cf944438b19d041d4f1ceb0)
+        ;
+
+        
+    
+    
+            var marker_0bd7d43139444b3199bc050f478feec7 = L.marker(
+                [60.108473, 30.490905],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_b5db12f118a340f5a92f0e799345118d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0bd7d43139444b3199bc050f478feec7.setIcon(icon_b5db12f118a340f5a92f0e799345118d);
+        
+    
+        var popup_4b4555d937a64b5b949827d4822500fc = L.popup({"maxWidth": "100%"});
+
+        
+            var html_8ba9df93027049f593a944b5d1d9ca1d = $(`<div id="html_8ba9df93027049f593a944b5d1d9ca1d" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6577545"target="_blank">link to news in VK</a></div>`)[0];
+            popup_4b4555d937a64b5b949827d4822500fc.setContent(html_8ba9df93027049f593a944b5d1d9ca1d);
+        
+
+        marker_0bd7d43139444b3199bc050f478feec7.bindPopup(popup_4b4555d937a64b5b949827d4822500fc)
+        ;
+
+        
+    
+    
+            var marker_04a63b548bc94d1b8f5456dbd0b4b195 = L.marker(
+                [59.793405, 30.324366],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_ea780fdc5ec1424dad8462215eca4894 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_04a63b548bc94d1b8f5456dbd0b4b195.setIcon(icon_ea780fdc5ec1424dad8462215eca4894);
+        
+    
+        var popup_31d1e6d71c15407a99467832195587be = L.popup({"maxWidth": "100%"});
+
+        
+            var html_3b6c85b8386146cb92b7ec4d42e5785f = $(`<div id="html_3b6c85b8386146cb92b7ec4d42e5785f" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6577355"target="_blank">link to news in VK</a></div>`)[0];
+            popup_31d1e6d71c15407a99467832195587be.setContent(html_3b6c85b8386146cb92b7ec4d42e5785f);
+        
+
+        marker_04a63b548bc94d1b8f5456dbd0b4b195.bindPopup(popup_31d1e6d71c15407a99467832195587be)
+        ;
+
+        
+    
+    
+            var marker_483df784e5a24227ac1b5feffcff7b9d = L.marker(
+                [59.720299, 30.061726],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_b7e483939c034a95b4a0c3664e901668 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_483df784e5a24227ac1b5feffcff7b9d.setIcon(icon_b7e483939c034a95b4a0c3664e901668);
+        
+    
+        var popup_81271656e720476ab1f5d55aafedb393 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_9718f355948a4545b1b45ec5a2bcec2f = $(`<div id="html_9718f355948a4545b1b45ec5a2bcec2f" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6577306"target="_blank">link to news in VK</a></div>`)[0];
+            popup_81271656e720476ab1f5d55aafedb393.setContent(html_9718f355948a4545b1b45ec5a2bcec2f);
+        
+
+        marker_483df784e5a24227ac1b5feffcff7b9d.bindPopup(popup_81271656e720476ab1f5d55aafedb393)
+        ;
+
+        
+    
+    
+            var marker_b4b94955f30147579ae8777a36270b05 = L.marker(
+                [59.84979, 30.218527],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_57fcbaab108945bf980953b2a68810a7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_b4b94955f30147579ae8777a36270b05.setIcon(icon_57fcbaab108945bf980953b2a68810a7);
+        
+    
+        var popup_294dd170f8a548f3ab7dc1b44e137865 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_faf64e14bb6e4772b105d0a41c463866 = $(`<div id="html_faf64e14bb6e4772b105d0a41c463866" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6576963"target="_blank">link to news in VK</a></div>`)[0];
+            popup_294dd170f8a548f3ab7dc1b44e137865.setContent(html_faf64e14bb6e4772b105d0a41c463866);
+        
+
+        marker_b4b94955f30147579ae8777a36270b05.bindPopup(popup_294dd170f8a548f3ab7dc1b44e137865)
+        ;
+
+        
+    
+    
+            var marker_3c7c3d48e5d24b7bb78ddbb77f3c3e7c = L.marker(
+                [59.999732, 30.221859],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_1813304ba8494aa4a47cb4735a6ee8fb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3c7c3d48e5d24b7bb78ddbb77f3c3e7c.setIcon(icon_1813304ba8494aa4a47cb4735a6ee8fb);
+        
+    
+        var popup_14a80d8c968646aca48f1e4f0f112661 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_6ae4f590ce614552a6ad2877a707013d = $(`<div id="html_6ae4f590ce614552a6ad2877a707013d" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6576783"target="_blank">link to news in VK</a></div>`)[0];
+            popup_14a80d8c968646aca48f1e4f0f112661.setContent(html_6ae4f590ce614552a6ad2877a707013d);
+        
+
+        marker_3c7c3d48e5d24b7bb78ddbb77f3c3e7c.bindPopup(popup_14a80d8c968646aca48f1e4f0f112661)
+        ;
+
+        
+    
+    
+            var marker_4a1ea300b35541a0961a86a4a88511b5 = L.marker(
+                [59.875863, 30.257666],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_7718170b36c44ec0b77248a0c52b5f3d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4a1ea300b35541a0961a86a4a88511b5.setIcon(icon_7718170b36c44ec0b77248a0c52b5f3d);
+        
+    
+        var popup_0535f6bf2c41439a81d3d800e610ee22 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4fce689b8cd54bbdb409fb4fe11274ee = $(`<div id="html_4fce689b8cd54bbdb409fb4fe11274ee" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6576746"target="_blank">link to news in VK</a></div>`)[0];
+            popup_0535f6bf2c41439a81d3d800e610ee22.setContent(html_4fce689b8cd54bbdb409fb4fe11274ee);
+        
+
+        marker_4a1ea300b35541a0961a86a4a88511b5.bindPopup(popup_0535f6bf2c41439a81d3d800e610ee22)
+        ;
+
+        
+    
+    
+            var marker_3f4a1f61e15f45cda521d337247fe916 = L.marker(
+                [60.575661, 30.226081],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_45f2deb8ee374e06a69fb0ce2067ac92 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3f4a1f61e15f45cda521d337247fe916.setIcon(icon_45f2deb8ee374e06a69fb0ce2067ac92);
+        
+    
+        var popup_edfd5d50e1694eefac3a7f989a680218 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_23671bdd17bb4d2686b729e8a6845cd8 = $(`<div id="html_23671bdd17bb4d2686b729e8a6845cd8" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6576712"target="_blank">link to news in VK</a></div>`)[0];
+            popup_edfd5d50e1694eefac3a7f989a680218.setContent(html_23671bdd17bb4d2686b729e8a6845cd8);
+        
+
+        marker_3f4a1f61e15f45cda521d337247fe916.bindPopup(popup_edfd5d50e1694eefac3a7f989a680218)
+        ;
+
+        
+    
+    
+            var marker_4a2442b709274735ade400ea807bfa70 = L.marker(
+                [59.932473, 30.349142],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_cd0bf9cae11e4db3bb53faec9f60bbb3 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_4a2442b709274735ade400ea807bfa70.setIcon(icon_cd0bf9cae11e4db3bb53faec9f60bbb3);
+        
+    
+        var popup_7bf02eb4f02746e8989f254dd7876b45 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_51dc1ee8657744adb513f5d38e3dfd0a = $(`<div id="html_51dc1ee8657744adb513f5d38e3dfd0a" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6576176"target="_blank">link to news in VK</a></div>`)[0];
+            popup_7bf02eb4f02746e8989f254dd7876b45.setContent(html_51dc1ee8657744adb513f5d38e3dfd0a);
+        
+
+        marker_4a2442b709274735ade400ea807bfa70.bindPopup(popup_7bf02eb4f02746e8989f254dd7876b45)
+        ;
+
+        
+    
+    
+            var marker_f17c3cbd305c4a7aa763e5ec4da02434 = L.marker(
+                [60.141613, 30.211879],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_1cc4efc46e76464ebd00951526e56938 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f17c3cbd305c4a7aa763e5ec4da02434.setIcon(icon_1cc4efc46e76464ebd00951526e56938);
+        
+    
+        var popup_c43a50ec609046e08197c23b384fd97e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b6d6b698d54e443894bb2e019abe5aad = $(`<div id="html_b6d6b698d54e443894bb2e019abe5aad" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6576168"target="_blank">link to news in VK</a></div>`)[0];
+            popup_c43a50ec609046e08197c23b384fd97e.setContent(html_b6d6b698d54e443894bb2e019abe5aad);
+        
+
+        marker_f17c3cbd305c4a7aa763e5ec4da02434.bindPopup(popup_c43a50ec609046e08197c23b384fd97e)
+        ;
+
+        
+    
+    
+            var marker_0a161672f79a4a2ea3908036782930a5 = L.marker(
+                [59.877226, 30.437662],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_ceb7a077f56d42358b04efe67bae19c8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_0a161672f79a4a2ea3908036782930a5.setIcon(icon_ceb7a077f56d42358b04efe67bae19c8);
+        
+    
+        var popup_77a5f75115c5438a96b2af6d12af889c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_fdba6c542ceb41239fe85cd58167563d = $(`<div id="html_fdba6c542ceb41239fe85cd58167563d" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6575917"target="_blank">link to news in VK</a></div>`)[0];
+            popup_77a5f75115c5438a96b2af6d12af889c.setContent(html_fdba6c542ceb41239fe85cd58167563d);
+        
+
+        marker_0a161672f79a4a2ea3908036782930a5.bindPopup(popup_77a5f75115c5438a96b2af6d12af889c)
+        ;
+
+        
+    
+    
+            var marker_016878a5d6e948c1be45d11a3febd45a = L.marker(
+                [59.838209, 30.349762],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_d84703b9bf5a42318a7cf65e4edcda55 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_016878a5d6e948c1be45d11a3febd45a.setIcon(icon_d84703b9bf5a42318a7cf65e4edcda55);
+        
+    
+        var popup_7a8f6c3199114007b02d841a50133ac8 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_764e39e3f5424e479c686b303c349013 = $(`<div id="html_764e39e3f5424e479c686b303c349013" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6575898"target="_blank">link to news in VK</a></div>`)[0];
+            popup_7a8f6c3199114007b02d841a50133ac8.setContent(html_764e39e3f5424e479c686b303c349013);
+        
+
+        marker_016878a5d6e948c1be45d11a3febd45a.bindPopup(popup_7a8f6c3199114007b02d841a50133ac8)
+        ;
+
+        
+    
+    
+            var marker_f0cdc76e5d6b43069af391bd36b5074f = L.marker(
+                [60.082458, 30.26417],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_1a31887972044a7e868d6860b483eef0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_f0cdc76e5d6b43069af391bd36b5074f.setIcon(icon_1a31887972044a7e868d6860b483eef0);
+        
+    
+        var popup_db8ad53a1b67486d95e479b16c16aeee = L.popup({"maxWidth": "100%"});
+
+        
+            var html_bc19814238374098b3715a2b1663b970 = $(`<div id="html_bc19814238374098b3715a2b1663b970" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6575557"target="_blank">link to news in VK</a></div>`)[0];
+            popup_db8ad53a1b67486d95e479b16c16aeee.setContent(html_bc19814238374098b3715a2b1663b970);
+        
+
+        marker_f0cdc76e5d6b43069af391bd36b5074f.bindPopup(popup_db8ad53a1b67486d95e479b16c16aeee)
+        ;
+
+        
+    
+    
+            var marker_bda1f7d1c9074cc1a4559e1bf03d0021 = L.marker(
+                [59.916798, 30.387635],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_17b70f3913584762a56e09c226365e35 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bda1f7d1c9074cc1a4559e1bf03d0021.setIcon(icon_17b70f3913584762a56e09c226365e35);
+        
+    
+        var popup_d07c66aa05254cd0bb94684aa56288ff = L.popup({"maxWidth": "100%"});
+
+        
+            var html_11a2e9a4b64c4bbcb15257f4441e8f9b = $(`<div id="html_11a2e9a4b64c4bbcb15257f4441e8f9b" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6575542"target="_blank">link to news in VK</a></div>`)[0];
+            popup_d07c66aa05254cd0bb94684aa56288ff.setContent(html_11a2e9a4b64c4bbcb15257f4441e8f9b);
+        
+
+        marker_bda1f7d1c9074cc1a4559e1bf03d0021.bindPopup(popup_d07c66aa05254cd0bb94684aa56288ff)
+        ;
+
+        
+    
+    
+            var marker_e29c7ce8ab9242af929907af3f0e9ceb = L.marker(
+                [59.985143, 30.256498],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_b1b0b0d0f5a347b28640f9934de5d1e0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_e29c7ce8ab9242af929907af3f0e9ceb.setIcon(icon_b1b0b0d0f5a347b28640f9934de5d1e0);
+        
+    
+        var popup_cfd55ac39da4450a843a01cde097322e = L.popup({"maxWidth": "100%"});
+
+        
+            var html_b2f3f6824e054b9db36b48c8e5d74d5f = $(`<div id="html_b2f3f6824e054b9db36b48c8e5d74d5f" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6575392"target="_blank">link to news in VK</a></div>`)[0];
+            popup_cfd55ac39da4450a843a01cde097322e.setContent(html_b2f3f6824e054b9db36b48c8e5d74d5f);
+        
+
+        marker_e29c7ce8ab9242af929907af3f0e9ceb.bindPopup(popup_cfd55ac39da4450a843a01cde097322e)
+        ;
+
+        
+    
+    
+            var marker_bc60a64b902440c69d867fbe62fd293b = L.marker(
+                [59.941962, 30.288425],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_b75dbef6a9ad4de9a146dacdcf2c5cba = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bc60a64b902440c69d867fbe62fd293b.setIcon(icon_b75dbef6a9ad4de9a146dacdcf2c5cba);
+        
+    
+        var popup_9ae79e055214437a9f05dfdf939ea91c = L.popup({"maxWidth": "100%"});
+
+        
+            var html_54bcd51a6d844ea1bb592d2c0ac2aa25 = $(`<div id="html_54bcd51a6d844ea1bb592d2c0ac2aa25" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6575387"target="_blank">link to news in VK</a></div>`)[0];
+            popup_9ae79e055214437a9f05dfdf939ea91c.setContent(html_54bcd51a6d844ea1bb592d2c0ac2aa25);
+        
+
+        marker_bc60a64b902440c69d867fbe62fd293b.bindPopup(popup_9ae79e055214437a9f05dfdf939ea91c)
+        ;
+
+        
+    
+    
+            var marker_5fee37ac2a594bd6bac3f06f4838b39c = L.marker(
+                [59.844845, 30.371743],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_ca0e2f199c6e4eab9158bdda291583ce = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_5fee37ac2a594bd6bac3f06f4838b39c.setIcon(icon_ca0e2f199c6e4eab9158bdda291583ce);
+        
+    
+        var popup_43b23fb78e574d7f9191c1a05cbd20f3 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7c902577f8b74f6692a8c199edbb7f1e = $(`<div id="html_7c902577f8b74f6692a8c199edbb7f1e" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6575316"target="_blank">link to news in VK</a></div>`)[0];
+            popup_43b23fb78e574d7f9191c1a05cbd20f3.setContent(html_7c902577f8b74f6692a8c199edbb7f1e);
+        
+
+        marker_5fee37ac2a594bd6bac3f06f4838b39c.bindPopup(popup_43b23fb78e574d7f9191c1a05cbd20f3)
+        ;
+
+        
+    
+    
+            var marker_1c788af4bc0d49a6a93dc79059190f8b = L.marker(
+                [59.751855, 30.562195],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_deb5bed11bb04a389d01ea8ff7526d78 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_1c788af4bc0d49a6a93dc79059190f8b.setIcon(icon_deb5bed11bb04a389d01ea8ff7526d78);
+        
+    
+        var popup_52a3dce52b39423dbf1d7f0b8ce63a5a = L.popup({"maxWidth": "100%"});
+
+        
+            var html_04fe0c8061d749fcae4ce260190ca656 = $(`<div id="html_04fe0c8061d749fcae4ce260190ca656" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6575185"target="_blank">link to news in VK</a></div>`)[0];
+            popup_52a3dce52b39423dbf1d7f0b8ce63a5a.setContent(html_04fe0c8061d749fcae4ce260190ca656);
+        
+
+        marker_1c788af4bc0d49a6a93dc79059190f8b.bindPopup(popup_52a3dce52b39423dbf1d7f0b8ce63a5a)
+        ;
+
+        
+    
+    
+            var marker_c6e6f250677b41ce86e113486b1c15fd = L.marker(
+                [60.066971, 30.333996],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_f4e284a90bcf42249bf1c074ff2e376f = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_c6e6f250677b41ce86e113486b1c15fd.setIcon(icon_f4e284a90bcf42249bf1c074ff2e376f);
+        
+    
+        var popup_a7ca8fe812924e77a563889e7d16336f = L.popup({"maxWidth": "100%"});
+
+        
+            var html_a456310f00a14247a680e6be99552b52 = $(`<div id="html_a456310f00a14247a680e6be99552b52" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6574898"target="_blank">link to news in VK</a></div>`)[0];
+            popup_a7ca8fe812924e77a563889e7d16336f.setContent(html_a456310f00a14247a680e6be99552b52);
+        
+
+        marker_c6e6f250677b41ce86e113486b1c15fd.bindPopup(popup_a7ca8fe812924e77a563889e7d16336f)
+        ;
+
+        
+    
+    
+            var marker_bc42c8e72f8c4ac69f3e17a1db700637 = L.marker(
+                [60.029827, 30.378274],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_bd496e860f304d578b2786ea6dec2af7 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_bc42c8e72f8c4ac69f3e17a1db700637.setIcon(icon_bd496e860f304d578b2786ea6dec2af7);
+        
+    
+        var popup_33f59a23476a4412959c74eed86ae1ac = L.popup({"maxWidth": "100%"});
+
+        
+            var html_c730d03085cf4485abe4136cf49eab32 = $(`<div id="html_c730d03085cf4485abe4136cf49eab32" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6574716"target="_blank">link to news in VK</a></div>`)[0];
+            popup_33f59a23476a4412959c74eed86ae1ac.setContent(html_c730d03085cf4485abe4136cf49eab32);
+        
+
+        marker_bc42c8e72f8c4ac69f3e17a1db700637.bindPopup(popup_33f59a23476a4412959c74eed86ae1ac)
+        ;
+
+        
+    
+    
+            var marker_3862f01b9aa24fc28632562ed5213682 = L.marker(
+                [60.01539, 30.230618],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_29753d68641c49e8b0ae22cb30e6bdf8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_3862f01b9aa24fc28632562ed5213682.setIcon(icon_29753d68641c49e8b0ae22cb30e6bdf8);
+        
+    
+        var popup_5fe555a765f84501a0caa898858daebf = L.popup({"maxWidth": "100%"});
+
+        
+            var html_4144b4d815ee454a81e7f96bc55bb473 = $(`<div id="html_4144b4d815ee454a81e7f96bc55bb473" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6574715"target="_blank">link to news in VK</a></div>`)[0];
+            popup_5fe555a765f84501a0caa898858daebf.setContent(html_4144b4d815ee454a81e7f96bc55bb473);
+        
+
+        marker_3862f01b9aa24fc28632562ed5213682.bindPopup(popup_5fe555a765f84501a0caa898858daebf)
+        ;
+
+        
+    
+    
+            var marker_8c6b3e0978664e9999b4a5595296a5b0 = L.marker(
+                [59.929484, 30.344363],
+                {}
+            ).addTo(marker_cluster_4ed548db0e01436e80a30f433f46a514);
+        
+    
+            var icon_b22b21aa6bd644edbe7908a60d763406 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "info-sign", "iconColor": "white", "markerColor": "red", "prefix": "glyphicon"}
+            );
+            marker_8c6b3e0978664e9999b4a5595296a5b0.setIcon(icon_b22b21aa6bd644edbe7908a60d763406);
+        
+    
+        var popup_cc7dfd5c10854774b2df6d6196a27378 = L.popup({"maxWidth": "100%"});
+
+        
+            var html_7e3576c8f14b472187415706b29cf479 = $(`<div id="html_7e3576c8f14b472187415706b29cf479" style="width: 100.0%; height: 100.0%;"><a href="https://vk.com/spb_today?w=wall-68471405_6574654"target="_blank">link to news in VK</a></div>`)[0];
+            popup_cc7dfd5c10854774b2df6d6196a27378.setContent(html_7e3576c8f14b472187415706b29cf479);
+        
+
+        marker_8c6b3e0978664e9999b4a5595296a5b0.bindPopup(popup_cc7dfd5c10854774b2df6d6196a27378)
+        ;
+
+        
+    
+</script>
