@@ -22,13 +22,13 @@ class ExampleForm(FlaskForm):
 
 
 def map_render(start_date, end_date):
-    data = pd.read_csv('../data/new_with_street.csv')
+    data = pd.read_csv('data/new_with_street.csv')
     data = data.dropna()
     data = data.reset_index()
     data.drop(['index'], axis=1, inplace=True)
     mask = (data['date'] >= start_date) & (data['date'] <= end_date)
     df = data.loc[mask]
-    f = open('../api_key.txt', 'r')
+    f = open('data/api_key.txt', 'r')
     api = f.read()
     f.close()
     geolocator = Yandex(api)
@@ -51,12 +51,14 @@ def map_render(start_date, end_date):
 
 @app.route('/', methods=['POST', 'GET'])
 def head():
+    print("hello")
     form = ExampleForm()
     return render_template('date_picker.html', form=form)
 
 
 @app.route('/date', methods=['POST', 'GET'])
 def get_date():
+    print("hello")
     form = ExampleForm()
     if form.validate_on_submit():
         start = ' '.join([request.form['dt_from'], request.form['tm_from']])
@@ -66,4 +68,4 @@ def get_date():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=6971, debug=False)
+    app.run(host='0.0.0.0', port=8080, debug=True)
