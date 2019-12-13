@@ -4,3 +4,6 @@ __pycache__/
 exp/
 *_pickle
 .directory
+api_key.txt
+vk_api.txt
+api_key_bing.txt
