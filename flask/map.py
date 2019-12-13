@@ -5,9 +5,6 @@ from flask import Flask, render_template, request
 from flask_wtf import FlaskForm
 from wtforms.fields.html5 import DateField
 from wtforms_components import TimeField
-from sqlalchemy import create_engine, Column, Integer, String, DateTime
-from sqlalchemy.orm import scoped_session, sessionmaker
-from sqlalchemy.ext.declarative import declarative_base
 from folium.plugins import MarkerCluster
 import folium
 from geopy.geocoders import Yandex
