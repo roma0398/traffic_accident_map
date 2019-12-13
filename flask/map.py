@@ -32,18 +32,18 @@ def map_render(start_date, end_date):
         if st != '':
             id = df['id'][i]
             addr = f'Санкт-Петербург, {st}'
-            res = requests.get(f'https://geocode-maps.yandex.ru/1.x/?format=json&apikey={api}&geocode={addr}')
             try:
+                res = requests.get(f'https://geocode-maps.yandex.ru/1.x/?format=json&apikey={api}&geocode={addr}')
                 loc = json.loads(res.content.decode('utf8'))['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']['Point']['pos'].split(' ')
                 location = [float(loc[1]), float(loc[0])]
             except:
-                location = None
+                continue    
             if location is None:
                 continue
             if round(location[0], 6) == spb[0] and round(location[1], 6) == spb[1]:
                 continue
             folium.Marker(location=[location[0], location[1]], popup = folium.Popup(f'<a href="https://vk.com/spb_today?w=wall-68471405_{id}"target="_blank">link to news in VK</a>'), icon=folium.Icon(color = 'red', icon='info-sign')).add_to(marker_cluster)
-    map.save("map1.html")
+    map.save("templates/map.html")
 
 class ExampleForm(FlaskForm):
     dt_from = DateField('DatePicker', format='%Y-%m-%d')
