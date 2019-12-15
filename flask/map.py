@@ -15,36 +15,39 @@ app = Flask(__name__)
 app.secret_key = 'SHH!'
 
 def map_render(start_date, end_date):
-    data = pd.read_csv('data/new_with_street.csv')
-    data = data.dropna()
-    data = data.reset_index()
-    data.drop(['index'], axis=1, inplace=True)
-    mask = (data['date'] >= start_date) & (data['date'] <= end_date)
-    df = data.loc[mask]
-    f = open('api_key.txt', 'r')
-    api = f.read()
-    f.close()
-    spb = [59.939095, 30.315868]
-    map = folium.Map(location=spb, zoom_start = 10)
-    marker_cluster = MarkerCluster().add_to(map)
-    for i in tqdm(list(df.index.values)):
-        st = df['pavlov'][i]
-        if st != '':
-            id = df['id'][i]
-            addr = f'Санкт-Петербург, {st}'
-            try:
-                res = requests.get(f'https://geocode-maps.yandex.ru/1.x/?format=json&apikey={api}&geocode={addr}')
-                loc = json.loads(res.content.decode('utf8'))['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']['Point']['pos'].split(' ')
-                location = [float(loc[1]), float(loc[0])]
-            except:
-                continue    
-            if location is None:
-                continue
-            if round(location[0], 6) == spb[0] and round(location[1], 6) == spb[1]:
-                continue
-            name = df['pavlov'][i]
-            folium.Marker(location=[location[0], location[1]], popup = folium.Popup(f'<a href="https://vk.com/spb_today?w=wall-68471405_{id}"target="_blank">{name}</a>'), icon=folium.Icon(color = 'red', icon='info-sign')).add_to(marker_cluster)
-    map.save("templates/map.html")
+    file = f"map{start_date}:{end_date}.html"
+    if file not in os.listdir(path="templates/"):
+        data = pd.read_csv('data/new_with_street.csv')
+        data = data.dropna()
+        data = data.reset_index()
+        data.drop(['index'], axis=1, inplace=True)
+        mask = (data['date'] >= start_date) & (data['date'] <= end_date)
+        df = data.loc[mask]
+        f = open('api_key.txt', 'r')
+        api = f.read()
+        f.close()
+        spb = [59.939095, 30.315868]
+        map = folium.Map(location=spb, zoom_start = 10)
+        marker_cluster = MarkerCluster().add_to(map)
+        for i in tqdm(list(df.index.values)):
+            st = df['pavlov'][i]
+            if st != '':
+                id = df['id'][i]
+                addr = f'Санкт-Петербург, {st}'
+                try:
+                    res = requests.get(f'https://geocode-maps.yandex.ru/1.x/?format=json&apikey={api}&geocode={addr}')
+                    loc = json.loads(res.content.decode('utf8'))['response']['GeoObjectCollection']['featureMember'][0]['GeoObject']['Point']['pos'].split(' ')
+                    location = [float(loc[1]), float(loc[0])]
+                except:
+                    continue    
+                if location is None:
+                    continue
+                if round(location[0], 6) == spb[0] and round(location[1], 6) == spb[1]:
+                    continue
+                name = df['pavlov'][i]
+                folium.Marker(location=[location[0], location[1]], popup = folium.Popup(f'<a href="https://vk.com/spb_today?w=wall-68471405_{id}"target="_blank">{name}</a>'), icon=folium.Icon(color = 'red', icon='info-sign')).add_to(marker_cluster)
+        map.save('templates/' + file)
+    return file
 
 class ExampleForm(FlaskForm):
     dt_from = DateField('DatePicker', format='%Y-%m-%d')
@@ -64,7 +67,7 @@ def get_date():
         start = request.form['dt_from']
         end = request.form['dt_to']
         map_render(start, end)
-    return render_template('map.html')
+    return render_template(map_render(start, end))
 
 
 if __name__ == '__main__':
