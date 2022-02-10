@@ -5,5 +5,5 @@ vk
 vk_requests
 nltk
 natasha
-tensorflow==1.15.2
+tensorflow==2.5.3
 deeppavlov
