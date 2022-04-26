@@ -9,3 +9,4 @@ vk_api.txt
 api_key_bing.txt
 venv/
 .idea/
+notebooks/vk_parser.ipynb
