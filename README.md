@@ -12,4 +12,4 @@ docker-compose build - собрать
 docker-compose up - запустить
 ```
 
-### map.html a result of the program. The map shows all the accidents in the last year.
+### map.html a result of the program. The map shows all the accidents in 2019.
